@@ -1,112 +1,32 @@
-export DOTFILES=$HOME/.dotfiles
-export ZSH=$DOTFILES/zsh
+export ZSH=$HOME/.oh-my-zsh
+ZSH_THEME="agnoster"
+ENABLE_CORRECTION="true"
+COMPLETION_WAITING_DOTS="true"
 
-command_exists() {
-    type "$1" > /dev/null 2>&1
-}
+plugins=(git git-flow elixir adb archlinux systemd terminator vim-interaction zsh-autosuggestions)
 
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-# display how long all tasks over 10 seconds take
-export REPORTTIME=10
+# User configuration
+export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
 
-[[ -e ~/.terminfo ]] && export TERMINFO_DIRS=~/.terminfo:/usr/share/terminfo
+fpath=(~/.zsh/completion $fpath)
 
-# define the code directory
-# This is where my code exists and where I want the `c` autocomplete to work from exclusively
-if [[ -d ~/code ]]; then
-    export CODE_DIR=~/code
-fi
+source $ZSH/oh-my-zsh.sh
 
-# source all .zsh files inside of the zsh/ directory
-for config ($ZSH/**/*.zsh) source $config
+export LANG=en_US.UTF-8
+export EDITOR='vim'
 
-if [[ -a ~/.localrc ]]; then
-    source ~/.localrc
-fi
+RPROMPT='%{%K{black}%F{}%}%{%F{default}%}[%*]%f'
 
+# the fcuk alias :D
+alias fuck='echo "OKAAAAAY! OKAAAAY!! I will do it!" && sleep 0.8 && sudo $(fc -ln -1)'
+alias axel='axel -n 16 -a'
+alias px=proxychains
+alias v='nvim'
+alias vim='nvim'
 
-# initialize autocomplete
-autoload -U compinit add-zsh-hook
-compinit
-
-#for config ($ZSH/**/*completion.sh) source $config
-
-export EDITOR='nvim'
-export GIT_EDITOR='nvim'
-
-export PATH=/usr/local/bin:$PATH
-
-# add /usr/local/sbin
-if [[ -d /usr/local/sbin ]]; then
-    export PATH=/usr/local/sbin:$PATH
-fi
-
-# adding path directory for custom scripts
-export PATH=$DOTFILES/bin:$PATH
-
-# check for custom bin directory and add to path
-if [[ -d ~/bin ]]; then
-    export PATH=~/bin:$PATH
-fi
-
-# install rbenv
-if command_exists rbenv; then
-    eval "$(rbenv init -)"
-fi
-
-# add a config file for ripgrep
-export RIPGREP_CONFIG_PATH="$HOME/.rgrc"
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow -g "!{.git,node_modules}/*" 2> /dev/null'
-export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-
-# Base16 shell setup
-BASE16_SHELL=$HOME/.config/base16-shell/
-[ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
-
-if command_exists direnv; then
-    eval "$(direnv hook zsh)"
-fi
-
-if [ -z ${RELOAD}  ]; then
-    export ZPLUG_HOME=/usr/share/zsh/scripts/zplug/
-    source $ZPLUG_HOME/init.zsh
-    zplug 'zplug/zplug', hook-build:'zplug --self-manage'
-    zplug 'zsh-users/zsh-syntax-highlighting', defer:2
-    zplug 'zsh-users/zsh-autosuggestions'
-    export NVM_AUTO_USE=false
-    export NVM_NO_USE=true
-    zplug 'lukechilds/zsh-nvm'
-
-    if ! zplug check; then
-        printf "Install? [y/N]: "
-        if read -q; then
-            echo; zplug install
-        fi
-    fi
-
-    zplug load
-fi
-# alias git to hub
-if command_exists hub; then
-    eval "$(hub alias -s)"
-fi
-
-# add color to man pages
-export MANROFFOPT='-c'
-export LESS_TERMCAP_mb=$(tput bold; tput setaf 2)
-export LESS_TERMCAP_md=$(tput bold; tput setaf 6)
-export LESS_TERMCAP_me=$(tput sgr0)
-export LESS_TERMCAP_so=$(tput bold; tput setaf 3; tput setab 4)
-export LESS_TERMCAP_se=$(tput rmso; tput sgr0)
-export LESS_TERMCAP_us=$(tput smul; tput bold; tput setaf 7)
-export LESS_TERMCAP_ue=$(tput rmul; tput sgr0)
-export LESS_TERMCAP_mr=$(tput rev)
-export LESS_TERMCAP_mh=$(tput dim)
-
-# add shellcheck config
-# For a full list of errors, refer to
-# https://github.com/koalaman/shellcheck/wiki
-#
-# export SHELLCHECK_OPTS=""
+# The saviour command
+alias del='mv -t /tmp $@'
+# give up the bad habbit
+alias rm='echo "you should use del command to remove your files safely. if you really want rm back use /bin/rm"'

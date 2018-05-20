@@ -6,7 +6,6 @@ echo "=============================="
 formulas=(
     ack
     diff-so-fancy
-    #direnv
     dnsmasq
     fzf
     git
@@ -19,6 +18,7 @@ formulas=(
     node
     nginx
     python
+    python-pip
     rbenv
     reattach-to-user-namespace
     the_silver_searcher
@@ -37,6 +37,8 @@ formulas=(
     elixir
     sox
     atom
+    zsh-autosuggestions
+    axel
 )
 
 for formula in "${formulas[@]}"; do
