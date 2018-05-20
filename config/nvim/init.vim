@@ -31,7 +31,9 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'aradunovic/perun.vim'
 Plugin 'ryanoasis/vim-devicons'
 Plugin 'mhinz/vim-mix-format'
-Plugin 'Valloric/YouCompleteMe'
+"Plugin 'Valloric/YouCompleteMe'
+
+Plugin 'ctrlpvim/ctrlp.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -43,7 +45,7 @@ set t_Co=256
 set laststatus=2
 syntax enable
 set termguicolors
-colorscheme perun
+colorscheme torte
 
 set encoding=UTF-8
 

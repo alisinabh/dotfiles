@@ -18,8 +18,6 @@ formulas=(
     node
     nginx
     python
-    python-pip
-    rbenv
     reattach-to-user-namespace
     the_silver_searcher
     shellcheck
@@ -37,8 +35,8 @@ formulas=(
     elixir
     sox
     atom
-    zsh-autosuggestions
     axel
+    terminator
 )
 
 for formula in "${formulas[@]}"; do
@@ -67,3 +65,5 @@ if [[ "$SHELL" != "$zsh_path" ]]; then
     chsh -s "$zsh_path"
     echo "default shell changed to $zsh_path"
 fi
+
+curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh

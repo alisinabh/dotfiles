@@ -16,9 +16,12 @@ if [ -f "/etc/arch-release" ]; then
     echo -e "\\n\\nRunning on ArchLinux"
 
     source install/pacman.sh
+    source install/yaourt.sh
 fi
 
 source install/git.sh
+
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.nvim/bundle/Vundle.vim
 
 echo "creating vim directories"
 mkdir -p ~/.vim-tmp
@@ -29,8 +32,12 @@ if ! command_exists zsh; then
 elif ! [[ $SHELL =~ .*zsh.* ]]; then
     echo "Configuring zsh as default shell"
     chsh -s "$(which zsh)"
-    sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-    git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 fi
+
+source install/font.sh
+
+echo "Installing Vundle vim plugins"
+
+nvim +PluginInstall +qall
 
 echo "Done. Reload your terminal."
