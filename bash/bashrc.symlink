@@ -1,0 +1,22 @@
+#
+# ~/.bashrc
+#
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+force_color_prompt=yes
+color_prompt=yes
+parse_git_branch() {
+ git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+}
+
+alias ls='ls --color=auto'
+#PS1='[\u@\h \W]\$ '
+PS1='\e[0;33m@\u\e[m \w \e[0;36m$(parse_git_branch)\e[m\n> '
+
+unset color_prompt force_color_prompt
+
+export EDITOR='vim'
+export VISUAL='vim'
+
