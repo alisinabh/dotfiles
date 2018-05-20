@@ -18,7 +18,7 @@
     s = status --short
     ss  = status
     br = branch -v
-    aac = git add --all && git commit
+    aac = "!sh -c 'git add --all && git commit'"
     #addnw="!sh -c 'git diff -U0 -w --no-color \"$@\" | git apply --cached --ignore-whitespace --unidiff-zero -'"
 
     # rebase commands

@@ -6,7 +6,7 @@ echo "=============================="
 formulas=(
     ack
     diff-so-fancy
-    direnv
+    #direnv
     dnsmasq
     fzf
     git
