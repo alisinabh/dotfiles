@@ -16,6 +16,7 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
+alias ~="cd ~/"
 
 alias l="ls -lah ${colorflag}"
 alias la="ls -AF ${colorflag}"
