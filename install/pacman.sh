@@ -18,20 +18,15 @@ formulas=(
     node
     nginx
     python
-    reattach-to-user-namespace
-    the_silver_searcher
     shellcheck
     tmux
-    trash
     tree
     wget
     vim
     z
     zsh
     ripgrep
-    git-standup
     entr
-    zplug
     elixir
     sox
     atom
@@ -65,5 +60,3 @@ if [[ "$SHELL" != "$zsh_path" ]]; then
     chsh -s "$zsh_path"
     echo "default shell changed to $zsh_path"
 fi
-
-curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
