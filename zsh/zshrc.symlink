@@ -43,9 +43,6 @@ alias del='mv -t /tmp $@'
 alias rm='echo "you should use del command to remove your files safely. if you really want rm back use /bin/rm"'
 
 
-bindkey "^[[H" beginning-of-line
-bindkey "^[[F" end-of-line
-
 # Load theme file
 #zplug 'dracula/zsh', as:theme
 

@@ -1,3 +1,6 @@
 [submodule "config/nvim/bundle/Vundle.vim"]
 	path = config/nvim/bundle/Vundle.vim
 	url = https://github.com/VundleVim/Vundle.vim.git
+[submodule "sources/z"]
+	path = sources/z
+	url = https://github.com/rupa/z.git
