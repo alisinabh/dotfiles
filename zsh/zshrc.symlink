@@ -4,7 +4,6 @@ ENABLE_CORRECTION="true"
 COMPLETION_WAITING_DOTS="true"
 #plugins=(git git-flow elixir adb archlinux systemd terminator vim-interaction zsh-autosuggestions)
 
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $HOME/.zplug/init.zsh
 
 # Make sure to use double quotes
@@ -43,6 +42,9 @@ alias del='mv -t /tmp $@'
 # give up the bad habbit
 alias rm='echo "you should use del command to remove your files safely. if you really want rm back use /bin/rm"'
 
+
+bindkey "^[[H" beginning-of-line
+bindkey "^[[F" end-of-line
 
 # Load theme file
 #zplug 'dracula/zsh', as:theme

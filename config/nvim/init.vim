@@ -35,6 +35,8 @@ Plugin 'mhinz/vim-mix-format'
 
 Plugin 'ctrlpvim/ctrlp.vim'
 
+Plugin 'junegunn/fzf.vim'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 
@@ -48,6 +50,8 @@ set termguicolors
 colorscheme torte
 
 set encoding=UTF-8
+
+set number
 
 map <C-n> :NERDTreeToggle<CR>
 " To ignore plugin indent changes, instead use:
