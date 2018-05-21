@@ -28,6 +28,7 @@ Plugin 'elixir-lang/vim-elixir'
 Plugin 'slashmili/alchemist.vim'
 
 Plugin 'scrooloose/nerdtree'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'aradunovic/perun.vim'
 Plugin 'ryanoasis/vim-devicons'
 Plugin 'mhinz/vim-mix-format'
@@ -37,6 +38,7 @@ Plugin 'ctrlpvim/ctrlp.vim'
 
 Plugin 'junegunn/fzf.vim'
 
+Plugin 'gosukiwi/vim-atom-dark'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 
@@ -47,7 +49,7 @@ set t_Co=256
 set laststatus=2
 syntax enable
 set termguicolors
-colorscheme torte
+colorscheme atom-dark-256
 
 set encoding=UTF-8
 
