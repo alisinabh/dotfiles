@@ -72,10 +72,10 @@ bind -r C-h select-window -t :-
 bind -r C-l select-window -t :+
 
 # Resize pane shortcuts
-bind -r H resize-pane -L 10
-bind -r J resize-pane -D 10
-bind -r K resize-pane -U 10
-bind -r L resize-pane -R 10
+bind -r H resize-pane -L 6
+bind -r J resize-pane -D 6
+bind -r K resize-pane -U 6
+bind -r L resize-pane -R 6
 
 # enable mouse support for switching panes/windows
 setw -g mouse on
@@ -99,5 +99,8 @@ bind C-v run "tmux set-buffer $(reattach-to-user-namespace pbpaste); tmux paste-
 ##############################
 
 source ~/.dotfiles/tmux/theme.sh
+
+bind -n End send-key C-e
+bind -n Home send-key C-a
 #source-file "${HOME}/.tmux-themepack/basic.tmuxtheme"
 
