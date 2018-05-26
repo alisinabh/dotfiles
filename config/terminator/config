@@ -1,7 +1,6 @@
 [global_config]
   enabled_plugins = TerminalShot, LaunchpadCodeURLHandler, APTURLHandler, LaunchpadBugURLHandler
   geometry_hinting = True
-  hide_from_taskbar = True
   smart_copy = False
   title_font = Hack Nerd Font 9
   title_transmit_bg_color = "#000000"
