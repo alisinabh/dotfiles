@@ -32,6 +32,12 @@ formulas=(
     atom
     axel
     terminator
+    i3-gaps
+    i3blocks
+    i3lock
+    i3status
+    rofi
+    compton
 )
 
 for formula in "${formulas[@]}"; do
