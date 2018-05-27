@@ -36,13 +36,20 @@ formulas=(
     i3blocks
     i3lock
     i3status
-    rofi
     compton
+    rofi
+    ttf-font-awesome
+    xss-lock
+    xautolock
+    xorg-xprop
+    playerctl 
+    xorg-xbacklight
+    acpi
 )
 
 for formula in "${formulas[@]}"; do
     formula_name=$( echo "$formula" | awk '{print $1}' )
-    if pacman -Qs "$formula_name" > /dev/null 2>&1; then
+    if pacman -Qi "$formula_name" > /dev/null 2>&1; then
         echo "$formula_name already installed... skipping."
     else
         sudo pacman -S "$formula" --noconfirm
