@@ -202,7 +202,7 @@ bar {
 
 bindsym $mod+m move workspace to output left
 
-bindsym $mod+Shift+x exec i3lock --color 000000
+bindsym $mod+Shift+x exec i3lock --color 000000 -e -f
 
 bindsym $mod+d exec ~/.dotfiles/config/i3/scripts/rofi.sh
 
@@ -241,6 +241,8 @@ exec_always --no-startup-id xautolock -locker '~/.dotfiles/config/i3/scripts/loc
 # Auto-lock after suspend. xss-lock
 exec_always --no-startup-id xss-lock -- "$HOME/.dotfiles/config/i3/scripts/lock.sh"&
 
+exec_always --no-startup-id setxkbmap -layout us,ir
+exec_always --no-startup-id setxkbmap -option grp:alt_shift_toggle'
 
 exec --no-startup-id compton -f
 exec --no-startup-id synclient NaturalScrolling=1 VertScrollDelta=-113
