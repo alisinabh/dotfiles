@@ -242,7 +242,7 @@ exec_always --no-startup-id xautolock -locker '~/.dotfiles/config/i3/scripts/loc
 exec_always --no-startup-id xss-lock -- "$HOME/.dotfiles/config/i3/scripts/lock.sh"&
 
 exec_always --no-startup-id setxkbmap -layout us,ir
-exec_always --no-startup-id setxkbmap -option grp:alt_shift_toggle'
+exec_always --no-startup-id setxkbmap -option grp:alt_shift_toggle
 
 exec --no-startup-id compton -f
 exec --no-startup-id synclient NaturalScrolling=1 VertScrollDelta=-113
