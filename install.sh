@@ -46,3 +46,5 @@ echo "Installing Vundle vim plugins"
 nvim +PluginInstall +qall
 
 echo "Done. Reload your terminal."
+
+echo "Please activate gnome-keyring for i3: https://wiki.archlinux.org/index.php/GNOME/Keyring#PAM_method"
