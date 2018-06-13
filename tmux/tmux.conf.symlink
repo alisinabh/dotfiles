@@ -78,8 +78,8 @@ bind -r K resize-pane -U 6
 bind -r L resize-pane -R 6
 
 # Start selecting with 'v' and copy with 'y' (like vim).
-bind-key -t vi-copy v begin-selection
-bind-key -t vi-copy y copy-pipe "reattach-to-user-namespace pbcopy"
+# bind-key -t vi-copy v begin-selection
+# bind-key -t vi-copy y copy-pipe "reattach-to-user-namespace pbcopy"
 
 # enable mouse support for switching panes/windows
 setw -g mouse off
