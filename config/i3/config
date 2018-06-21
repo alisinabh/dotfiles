@@ -233,9 +233,9 @@ bindsym $mod+Shift+x exec i3lock --color 000000 -e -f
 
 bindsym $mod+d exec ~/.dotfiles/config/i3/scripts/rofi.sh
 
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-mute 0 false && pactl set-sink-volume 0 +5% 
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-mute 0 false && pactl set-sink-volume 0 +10% 
 #increase sound volume
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-mute 0 false && pactl set-sink-volume 0 -5% 
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-mute 0 false && pactl set-sink-volume 0 -10% 
 #decrease sound volume
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 2 toggle 
 # mute sound
@@ -273,6 +273,8 @@ exec_always --no-startup-id setxkbmap -option grp:alt_shift_toggle
 
 exec --no-startup-id compton -f
 exec --no-startup-id synclient NaturalScrolling=1 VertScrollDelta=-113
+# Normalize volume
+exec pactl set-sink-volume 0 20%
 
 exec --no-startup-id terminator
 #exec --no-startup-id spotify
