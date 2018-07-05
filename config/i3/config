@@ -268,13 +268,15 @@ exec_always --no-startup-id xautolock -locker '~/.dotfiles/config/i3/scripts/loc
 # Auto-lock after suspend. xss-lock
 exec_always --no-startup-id xss-lock -- "$HOME/.dotfiles/config/i3/scripts/lock.sh"&
 
-exec_always --no-startup-id setxkbmap -layout us,ir
-exec_always --no-startup-id setxkbmap -option grp:alt_shift_toggle
+exec_always setxkbmap -layout us,ir
+exec_always setxkbmap -option grp:alt_shift_toggle
 
 exec --no-startup-id compton -f
 exec --no-startup-id synclient NaturalScrolling=1 VertScrollDelta=-113
 # Normalize volume
 exec pactl set-sink-volume 0 20%
+
+exec_always --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
 exec --no-startup-id terminator
 #exec --no-startup-id spotify
