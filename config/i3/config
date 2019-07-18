@@ -250,6 +250,10 @@ bindsym $mod+Shift+f exec chromium
 bindsym XF86MonBrightnessUp exec xbacklight -inc 10 
 bindsym XF86MonBrightnessDown exec xbacklight -dec 10
 
+# Screen Shots
+bindsym Print exec scrot '%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f ~/Pictures/'
+bindsym Control+Print exec gnome-screenshot -i
+
 # Assigns
 assign [class="Spotify"] $ws10
 assign [class="Chromium"] $ws2

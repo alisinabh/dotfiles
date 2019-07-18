@@ -70,7 +70,7 @@ suspended_jobs() {
 
 precmd() {
     vcs_info
-    print -P '\n%F{6}%~'
+    print -P '\n$(whoami)@$(hostname) %F{6}%~'
 }
 
 PROMPT_SYMBOL='❯'
