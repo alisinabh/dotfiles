@@ -38,7 +38,7 @@ formulas=(
     i3status
     compton
     rofi
-    ttf-font-awesome
+    otf-font-awesome
     xss-lock
     xautolock
     xorg-xprop
