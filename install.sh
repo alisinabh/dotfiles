@@ -19,7 +19,8 @@ if [ -f "/etc/arch-release" ]; then
     echo -e "\\n\\nRunning on ArchLinux"
 
     source install/pacman.sh
-    source install/yaourt.sh
+    #source install/yaourt.sh
+    source install/yay.sh
 fi
 
 source install/git.sh

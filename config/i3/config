@@ -269,7 +269,8 @@ exec_always xmodmap -e "clear lock" #disable caps lock switch
 exec_always xmodmap -e "keysym Caps_Lock = Ctrl" #set caps_lock as Controll
 
 # Auto-lock after some time
-exec_always --no-startup-id xautolock -locker '~/.dotfiles/config/i3/scripts/lock.sh' -time 5&
+#exec --no-startup-id xautolock -locker '~/.dotfiles/config/i3/scripts/lock.sh' -time 5&
+exec --no-startup-id xidlehook --not-when-fullscreen --timer normal 600 '~/.dotfiles/config/i3/scripts/lock.sh' ''
 
 # Auto-lock after suspend. xss-lock
 exec_always --no-startup-id xss-lock -- "$HOME/.dotfiles/config/i3/scripts/lock.sh"&
