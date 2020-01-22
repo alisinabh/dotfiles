@@ -40,6 +40,7 @@ Plugin 'junegunn/fzf.vim'
 
 Plugin 'gosukiwi/vim-atom-dark'
 Plugin 'mileszs/ack.vim'
+Plugin 'kylef/apiblueprint.vim'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 

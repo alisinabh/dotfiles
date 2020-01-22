@@ -261,8 +261,8 @@ assign [class="Chromium"] $ws2
 exec_always --no-startup-id nm-applet
 
 #exec_always xrandr --output DVI-I-1 --primary --mode 1680x1050_60.00 --pos 0x9 --rotate normal --output DVI-I-2 --mode 1680x1050_60.00 --pos 1680x0 --rotate normal
-
-exec_always xrandr --dpi 120
+#exec_always xrandr --output HDMI-1 --primary --mode 1920x1080_60.00 --pos 0x9 --rotate normal
+exec_always xrandr --output HDMI-1 --primary --mode 1920x1080 --pos 1920x0 --rotate normal --output DVI-I-1 --mode 1920x1080 --pos 0x0 --rotate normal
 
 # Keys
 exec_always xmodmap -e "clear lock" #disable caps lock switch
@@ -287,7 +287,7 @@ exec --no-startup-id dconf write /org/gnome/settings-daemon/plugins/cursor/activ
 exec --no-startup-id compton -f
 exec --no-startup-id synclient NaturalScrolling=1 VertScrollDelta=-113
 # Normalize volume
-exec pactl set-sink-volume 0 20%
+exec pactl set-sink-mute 0 false && pactl set-sink-volume 0 35%
 
 exec_always --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
