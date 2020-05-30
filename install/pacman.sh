@@ -45,6 +45,8 @@ formulas=(
     playerctl 
     xorg-xbacklight
     acpi
+    ttf-fantasque-sans-mono
+    ttf-dejavu
 )
 
 for formula in "${formulas[@]}"; do

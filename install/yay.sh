@@ -8,6 +8,6 @@ git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
 
-yay xidlehook
+yay -S xidlehook
 
 cd $CUR_DIR
