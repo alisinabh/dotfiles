@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -e
+
 command_exists() {
     type "$1" > /dev/null 2>&1
 }
@@ -11,8 +13,6 @@ git submodule update --init --recursive
 
 source install/link.sh
 
-# Install zplug
-curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
 
 # only perform ArchLinux-specific install
 if [ -f "/etc/arch-release" ]; then

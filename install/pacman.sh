@@ -4,6 +4,7 @@ echo -e "\\n\\nInstalling pacman packages..."
 echo "=============================="
 
 formulas=(
+    inetutils
     ack
     diff-so-fancy
     dnsmasq
@@ -13,9 +14,7 @@ formulas=(
     highlight
     hub
     markdown
-    mas
     neovim
-    node
     nginx
     python
     shellcheck
@@ -29,7 +28,6 @@ formulas=(
     entr
     elixir
     sox
-    atom
     axel
     terminator
     i3-gaps
@@ -47,6 +45,9 @@ formulas=(
     acpi
     ttf-fantasque-sans-mono
     ttf-dejavu
+    code
+    python-pip
+    network-managet-applet
 )
 
 for formula in "${formulas[@]}"; do
@@ -61,7 +62,7 @@ done
 # after hte install, install neovim python libraries
 echo -e "\\n\\nRunning Neovim Python install"
 echo "=============================="
-pip2 install --user neovim
+#pip2 install --user neovim
 pip3 install --user neovim
 
 # Change the default shell to zsh
