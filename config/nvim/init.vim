@@ -54,6 +54,12 @@ colorscheme atom-dark-256
 
 set encoding=UTF-8
 
+let g:ackprg = 'ag --vimgrep --smart-case'                                                   
+cnoreabbrev ag Ack                                                                           
+cnoreabbrev aG Ack                                                                           
+cnoreabbrev Ag Ack                                                                           
+cnoreabbrev AG Ack  
+
 set number
 
 map <C-n> :NERDTreeToggle<CR>

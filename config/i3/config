@@ -254,6 +254,9 @@ bindsym $mod+Shift+f exec chromium
 bindsym XF86MonBrightnessUp exec xbacklight -inc 10 
 bindsym XF86MonBrightnessDown exec xbacklight -dec 10
 
+bindsym Shift+XF86MonBrightnessUp exec xbacklight -inc 1
+bindsym Shift+XF86MonBrightnessDown exec xbacklight -dec 1
+
 # Screen Shots
 bindsym Print exec scrot '%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f ~/Pictures/'
 bindsym Control+Print exec gnome-screenshot -i

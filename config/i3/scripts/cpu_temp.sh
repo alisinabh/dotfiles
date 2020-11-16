@@ -1,6 +1,6 @@
 #!/bin/sh
 
-CPU_PACK_TEMP=$(sensors -j | jq '."coretemp-isa-0000"."Package id 0"."temp1_input"')
+CPU_PACK_TEMP=$(sensors -j | jq '."coretemp-isa-0000"."Core 0"."temp2_input"')
 
 if [ "$CPU_PACK_TEMP" -gt "70" ];
 then
