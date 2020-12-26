@@ -41,10 +41,31 @@ Plugin 'junegunn/fzf.vim'
 Plugin 'gosukiwi/vim-atom-dark'
 Plugin 'mileszs/ack.vim'
 Plugin 'kylef/apiblueprint.vim'
+
+" Dart
+Plugin 'dart-lang/dart-vim-plugin'
+
+" Solidity
+Plugin 'tomlion/vim-solidity'
+
+" Spell check
+Plugin 'kamykn/spelunker.vim'
+Plugin 'kamykn/popup-menu.nvim'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 
 let g:mix_format_on_save = 1
+let g:ctrlp_user_command = 'find %s -type f'
+let g:ctrlp_working_path_mode = 'ra'
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files']
+
+let dart_html_in_string=v:true
+let g:dart_style_guide = 2
+let g:dart_format_on_save = 1
+
+let g:enable_spelunker_vim_on_readonly = 1
+let g:spelunker_max_hi_words_each_buf = 300
 
 filetype plugin indent on    " required
 set t_Co=256
@@ -56,6 +77,11 @@ colorscheme atom-dark-256
 set encoding=UTF-8
 
 set number
+
+set ts=2
+set sts=2
+set sw=2
+set et
 
 map <C-n> :NERDTreeToggle<CR>
 " To ignore plugin indent changes, instead use:
