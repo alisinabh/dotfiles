@@ -1,2 +1,2 @@
 #!/bin/bash
-i3lock --color 000000 
+i3lock -b -e -f --color 000000 
