@@ -234,7 +234,8 @@ for_window [title="Android Emulator - Nexus_5X_API_29_x86:5554"] floating enable
 
 bindsym $mod+m move workspace to output left
 
-bindsym $mod+Shift+x exec i3lock --color 000000 -e -f
+#bindsym $mod+Shift+x exec i3lock --color 000000 -e -f
+bindsym $mod+Shift+x exec ~/.dotfiles/config/i3/scripts/lock.sh
 
 bindsym $mod+d exec ~/.dotfiles/config/i3/scripts/rofi.sh
 
@@ -297,8 +298,8 @@ bindsym $mod+p mode "$mode_system"
 # Auto-lock after suspend. xss-lock
 exec_always --no-startup-id xss-lock -- "$HOME/.dotfiles/config/i3/scripts/lock.sh"&
 
-exec_always --no-startup-id "sleep 1; setxkbmap -layout us,ir"
-exec_always --no-startup-id "sleep 1; setxkbmap -option grp:alt_shift_toggle"
+exec_always --no-startup-id "sleep 3; setxkbmap -layout us,ir"
+exec_always --no-startup-id "sleep 4; setxkbmap -option grp:alt_shift_toggle"
 
 # Restore GNOME's settings
 exec --no-startup-id /usr/libexec/gnome-settings-daemon-localeexec

@@ -1,2 +1,3 @@
 #!/bin/bash
-i3lock --color 000000 
+killall picom
+i3lock --color 000000 -e -f
