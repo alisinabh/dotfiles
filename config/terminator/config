@@ -11,6 +11,8 @@
 [profiles]
   [[default]]
     background_color = "#0c0c0c"
+    background_darkness = 0.85
+    background_type = transparent
     cursor_shape = underline
     cursor_color = "#aaaaaa"
     font = Hack Nerd Font 14

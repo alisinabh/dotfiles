@@ -4,6 +4,7 @@ echo -e "\\n\\nInstalling pacman packages..."
 echo "=============================="
 
 formulas=(
+    base-devel
     inetutils
     ack
     diff-so-fancy
@@ -47,7 +48,10 @@ formulas=(
     ttf-dejavu
     code
     python-pip
-    network-managet-applet
+    network-manager-applet
+    fakeroot
+    jq
+    dunst
 )
 
 for formula in "${formulas[@]}"; do
