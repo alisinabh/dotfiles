@@ -266,6 +266,8 @@ assign [class="Spotify"] $ws10
 assign [class="Chromium"] $ws2
 
 exec_always --no-startup-id nm-applet
+exec_always --no-startup-id blueman-applet
+exec_always --no-startup-id dunst
 
 #exec_always xrandr --output DVI-I-1 --primary --mode 1680x1050_60.00 --pos 0x9 --rotate normal --output DVI-I-2 --mode 1680x1050_60.00 --pos 1680x0 --rotate normal
 
