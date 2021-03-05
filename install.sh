@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -e
+
 command_exists() {
     type "$1" > /dev/null 2>&1
 }
@@ -11,15 +13,14 @@ git submodule update --init --recursive
 
 source install/link.sh
 
-# Install zplug
-curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
 
 # only perform ArchLinux-specific install
 if [ -f "/etc/arch-release" ]; then
     echo -e "\\n\\nRunning on ArchLinux"
 
     source install/pacman.sh
-    source install/yaourt.sh
+    #source install/yaourt.sh
+    source install/yay.sh
 fi
 
 source install/git.sh
@@ -46,3 +47,5 @@ echo "Installing Vundle vim plugins"
 nvim +PluginInstall +qall
 
 echo "Done. Reload your terminal."
+
+echo "Please activate gnome-keyring for i3: https://wiki.archlinux.org/index.php/GNOME/Keyring#PAM_method"

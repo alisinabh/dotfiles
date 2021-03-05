@@ -39,6 +39,7 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'junegunn/fzf.vim'
 
 Plugin 'gosukiwi/vim-atom-dark'
+Plugin 'mileszs/ack.vim'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 
@@ -52,6 +53,12 @@ set termguicolors
 colorscheme atom-dark-256
 
 set encoding=UTF-8
+
+let g:ackprg = 'ag --vimgrep --smart-case'                                                   
+cnoreabbrev ag Ack                                                                           
+cnoreabbrev aG Ack                                                                           
+cnoreabbrev Ag Ack                                                                           
+cnoreabbrev AG Ack  
 
 set number
 
