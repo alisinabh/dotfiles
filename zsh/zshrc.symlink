@@ -15,6 +15,7 @@ zplug 'zsh-users/zsh-autosuggestions'
 
 # User configuration
 export PATH="$HOME/.bin:$HOME/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH"
+export PATH="/home/alisina/.local/share/gem/ruby/2.7.0/bin:$PATH"
 
 export ANDROID_HOME="/opt/android-sdk"
 
@@ -59,3 +60,6 @@ fi
 
 # Then, source plugins and add commands to $PATH
 zplug load
+
+# Rbenv
+#eval "$(rbenv init -)"

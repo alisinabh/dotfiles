@@ -28,6 +28,7 @@ alias rmf="rm -rf"
 alias grep='grep --color=auto'
 alias df='df -h' # disk free, in Gigabytes, not bytes
 alias du='du -h -c' # calculate disk usage for a folder
+alias du1='du -d1 -h -c | sort -hr'
 
 # Flush Directory Service cache
 alias flush="dscacheutil -flushcache"
