@@ -7,6 +7,9 @@ COMPLETION_WAITING_DOTS="true"
 if [[ "$OSTYPE" == "darwin"* ]]; then
   export ZPLUG_HOME=/usr/local/opt/zplug
   source $ZPLUG_HOME/init.zsh
+
+  # Fix gpg issue on signed commits
+  export GPG_TTY=$(tty)
 else
   source /usr/share/zsh/scripts/zplug/init.zsh
 fi

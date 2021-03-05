@@ -2,6 +2,7 @@
 [user]
 	name = Alisina Bahadori
 	email = alisina.bm@gmail.com
+	signingKey = 879438FF089A204E9905976B23497CA1E4565402
 [github]
 	user = alisinabh
 [init]
@@ -20,7 +21,7 @@
     br = branch -v
     #addnw="!sh -c 'git diff -U0 -w --no-color \"$@\" | git apply --cached --ignore-whitespace --unidiff-zero -'"
     aac = "!sh -c 'git add --all && git commit'"
-    aacp = "!sh -c 'git add --all && git commit && sleep 0.8 && git push'"
+    aacp = "!sh -c 'git add --all && git commit && sleep 1 && git push'"
 
     # rebase commands
     #cont = rebase --continue
@@ -168,3 +169,5 @@
     show = "diff-so-fancy | less --tabs=4 -RFX"
 [pull]
 	rebase = true
+[commit]
+	gpgSign = true
