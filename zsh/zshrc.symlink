@@ -4,7 +4,12 @@ ENABLE_CORRECTION="true"
 COMPLETION_WAITING_DOTS="true"
 #plugins=(git git-flow elixir adb archlinux systemd terminator vim-interaction zsh-autosuggestions)
 
-source /usr/share/zsh/scripts/zplug/init.zsh
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  export ZPLUG_HOME=/usr/local/opt/zplug
+  source $ZPLUG_HOME/init.zsh
+else
+  source /usr/share/zsh/scripts/zplug/init.zsh
+fi
 #source $HOME/.zplug/init.zsh
 
 # Make sure to use double quotes

@@ -21,11 +21,19 @@ if [ -f "/etc/arch-release" ]; then
     source install/pacman.sh
     #source install/yaourt.sh
     source install/yay.sh
+elif [[ "$OSTYPE" = "darwin"* ]]; then
+    echo -e "\\n\\nRunning on MacOS"
+
+    source install/macos.sh
 fi
 
 source install/git.sh
 
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.nvim/bundle/Vundle.vim
+if [ -d ~/.nvim/bundle/Vundle.vim ]; then
+    echo "Vundle already cloned!"
+else
+    git clone https://github.com/VundleVim/Vundle.vim.git ~/.nvim/bundle/Vundle.vim
+fi
 
 if ! command_exists zsh; then
     echo "zsh not found. Please install and then re-run installation scripts"
