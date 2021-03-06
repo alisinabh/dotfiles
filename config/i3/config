@@ -273,6 +273,8 @@ exec_always --no-startup-id dunst
 
 exec_always xrandr --dpi 120
 
+exec --no-startup-id xset r rate 300 35
+
 # Keys
 exec_always xmodmap -e "clear lock" #disable caps lock switch
 exec_always xmodmap -e "keysym Caps_Lock = Ctrl" #set caps_lock as Controll
