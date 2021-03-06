@@ -52,6 +52,7 @@ formulas=(
     fakeroot
     jq
     dunst
+    kitty
 )
 
 for formula in "${formulas[@]}"; do

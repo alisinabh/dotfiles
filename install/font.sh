@@ -6,5 +6,7 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
     sudo mv Hack\ Regular*.ttf /Library/Fonts
 else
     sudo mv Hack\ Regular*.ttf /usr/share/fonts
+
+    sudo pacman -S ttf-fira-code --noconfirm
 fi
 
