@@ -14,6 +14,7 @@ if OS.mac?
     cask "audio-hijack"
     cask "paw"
     cask "postman"
+    cask "vlc"
 
     # Browsers
     #cask "firefox"
@@ -71,3 +72,7 @@ brew "elixir"
 brew "pass"
 brew "pass-otp"
 brew "axel"
+brew "helm"
+brew "kubernetes-cli"
+brew "minikube"
+brew "watch"
