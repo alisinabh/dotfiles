@@ -18,9 +18,9 @@ alias ....="cd ../../.."
 alias .....="cd ../../../.."
 alias ~="cd ~/"
 
-alias l="ls -lah ${colorflag}"
+alias l="ls -F ${colorflag}"
 alias la="ls -AF ${colorflag}"
-alias ll="ls -lFh ${colorflag}"
+alias ll="ls -lah ${colorflag}"
 alias lld="ls -l | grep ^d"
 alias rmf="rm -rf"
 
