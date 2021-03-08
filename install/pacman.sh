@@ -53,6 +53,7 @@ formulas=(
     jq
     dunst
     kitty
+    the_silver_searcher
 )
 
 for formula in "${formulas[@]}"; do

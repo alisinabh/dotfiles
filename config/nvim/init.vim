@@ -29,17 +29,25 @@ Plugin 'slashmili/alchemist.vim'
 
 Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
-Plugin 'aradunovic/perun.vim'
+"Plugin 'aradunovic/perun.vim'
 Plugin 'ryanoasis/vim-devicons'
 Plugin 'mhinz/vim-mix-format'
 "Plugin 'Valloric/YouCompleteMe'
 
-Plugin 'ctrlpvim/ctrlp.vim'
+" Remove ctrlp in favor of fzf
+" Plugin 'ctrlpvim/ctrlp.vim'
 
+Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plugin 'junegunn/fzf.vim'
 
 Plugin 'gosukiwi/vim-atom-dark'
 Plugin 'mileszs/ack.vim'
+
+Plugin 'Yggdroot/indentLine'
+
+Plugin 'kamykn/spelunker.vim'
+Plugin 'kamykn/popup-menu.nvim'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 
@@ -55,14 +63,32 @@ colorscheme atom-dark-256
 set encoding=UTF-8
 
 let g:ackprg = 'ag --vimgrep --smart-case'                                                   
-cnoreabbrev ag Ack                                                                           
-cnoreabbrev aG Ack                                                                           
-cnoreabbrev Ag Ack                                                                           
-cnoreabbrev AG Ack  
+let g:indentLine_char = '⦙'
+"cnoreabbrev ag Ack                                                                           
+"cnoreabbrev aG Ack                                                                           
+"cnoreabbrev Ag Ack                                                                           
+"cnoreabbrev AG Ack  
 
 set number
+set expandtab
+set mouse=nv
+set shiftwidth=2
+set softtabstop=2
+set autoread
+set clipboard=unnamed
+set ttyfast
+set shell=$SHELL
+set title
+set list
+set listchars=tab:→\ ,eol:¬,trail:⋅,extends:❯,precedes:❮
+
+set nospell
+let g:enable_spelunker_vim = 1
+
+match ErrorMsg '^\(<\|=\|>\)\{7\}\([^=].\+\)\?$'
 
 map <C-n> :NERDTreeToggle<CR>
+map <C-p> :Files<CR>
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
 "
