@@ -1,8 +1,9 @@
 [global_config]
   geometry_hinting = True
+  window_state = maximise
   borderless = True
   title_transmit_bg_color = "#000000"
-  inactive_color_offset = 0.808510638298
+  inactive_color_offset = 0.9013157894736842
   enabled_plugins = TerminalShot, LaunchpadCodeURLHandler, APTURLHandler, LaunchpadBugURLHandler
   title_use_system_font = False
   title_font = Hack Nerd Font 17
@@ -12,16 +13,17 @@
   [[default]]
     urgent_bell = True
     icon_bell = False
-    background_color = "#0c0c0c"
     background_darkness = 0.85
     cursor_shape = underline
     cursor_color = "#aaaaaa"
     font = Fira Code weight=450 14
+    foreground_color = "#ffffff"
     show_titlebar = False
     scrollback_lines = 5000
     disable_mousewheel_zoom = True
-    palette = "#888a85:#cc0000:#4e9a06:#c4a000:#3465a4:#75507b:#06989a:#d3d7cf:#555753:#ef2929:#8ae234:#fce94f:#729fcf:#ad7fa8:#34e2e2:#eeeeec"
+    palette = "#000000:#cc0000:#33d17a:#f5c211:#3465a4:#8a5f91:#07c2c5:#d3d7cf:#555753:#ef2929:#8ae234:#fce94f:#729fcf:#ad7fa8:#34e2e2:#eeeeec"
     use_system_font = False
+    bold_is_bright = True
     copy_on_selection = True
 [layouts]
   [[default]]
