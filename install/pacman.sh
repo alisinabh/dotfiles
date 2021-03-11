@@ -54,6 +54,7 @@ formulas=(
     dunst
     kitty
     the_silver_searcher
+    ttf-fira-code
 )
 
 for formula in "${formulas[@]}"; do
