@@ -90,6 +90,7 @@ match ErrorMsg '^\(<\|=\|>\)\{7\}\([^=].\+\)\?$'
 map <C-n> :NERDTreeToggle<CR>
 map <C-p> :Files<CR>
 map <C-i> :GFiles<CR>
+map <C-f> :Ag<CR>
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
 "
