@@ -1,6 +1,7 @@
 # git aliases
 alias gs='git s'
 alias glog="git l"
+alias gaacp="git aacp"
 
 function g() {
     if [[ $# > 0 ]]; then

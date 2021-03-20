@@ -21,3 +21,4 @@ lockfile
 ecto
 postgrex
 repo
+zplug

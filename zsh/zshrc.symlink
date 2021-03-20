@@ -42,19 +42,6 @@ export LANG=en_US.UTF-8
 export EDITOR='nvim'
 export GIT_EDITOR='nvim'
 
-# the fcuk alias :D
-alias fuck='echo "OKAAAAAY! OKAAAAY!! I will do it!" && sleep 0.3 && sudo $(fc -ln -1)'
-alias axel='axel -n 16 -a'
-alias px=proxychains
-alias v='nvim'
-alias vim='nvim'
-
-# The saviour command
-alias del='mv -t /tmp $@'
-# give up the bad habbit
-alias rm='echo "you should use del command to remove your files safely. if you really want rm back use /bin/rm"'
-
-
 # Load theme file
 #zplug 'dracula/zsh', as:theme
 
@@ -68,6 +55,8 @@ fi
 
 # Then, source plugins and add commands to $PATH
 zplug load
+
+source <(kubectl completion zsh)
 
 # Rbenv
 #eval "$(rbenv init -)"

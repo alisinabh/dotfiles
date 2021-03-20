@@ -49,5 +49,20 @@ alias fs="stat -f \"%z bytes\""
 # ROT13-encode text. Works for decoding, too! ;)
 alias rot13='tr a-zA-Z n-za-mN-ZA-M'
 
-
 alias pcat='pygmentize -f terminal256 -O style=native -g'
+
+# the fcuk alias :D
+alias fuck='echo "OKAAAAAY! OKAAAAY!! I will do it!" && sleep 0.3 && sudo $(fc -ln -1)'
+alias axel='axel -n 16 -a'
+alias px=proxychains
+alias v='nvim'
+alias vim='nvim'
+
+if [[ "$TERM" == "xterm-kitty" ]]; then
+  alias ssh="kitty +kitten ssh"
+fi
+
+# The saviour command
+alias del='mv -t /tmp $@'
+# give up the bad habbit
+alias rm='echo "you should use del command to remove your files safely. if you really want rm back use /bin/rm"'

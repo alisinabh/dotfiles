@@ -61,6 +61,7 @@ set termguicolors
 colorscheme atom-dark-256
 
 set encoding=UTF-8
+set encoding=utf-8
 
 let g:ackprg = 'ag --vimgrep --smart-case'                                                   
 let g:indentLine_char = '⦙'
