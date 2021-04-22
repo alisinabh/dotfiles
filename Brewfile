@@ -27,6 +27,7 @@ if OS.mac?
 
     # macOS App Store
     mas "Xcode", id: 497799835
+    mas "Amphetamine", id: 937984704
 elsif OS.linux?
     brew "xclip"
 end
@@ -78,3 +79,6 @@ brew "minikube"
 brew "watch"
 brew "the_silver_searcher"
 brew "git-crypt"
+brew "node"
+brew "npm"
+brew "yarn"

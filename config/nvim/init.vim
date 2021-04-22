@@ -24,14 +24,9 @@ Plugin 'L9'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 
-Plugin 'elixir-lang/vim-elixir'
-Plugin 'slashmili/alchemist.vim'
-
 Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
-"Plugin 'aradunovic/perun.vim'
 Plugin 'ryanoasis/vim-devicons'
-Plugin 'mhinz/vim-mix-format'
 "Plugin 'Valloric/YouCompleteMe'
 
 " Remove ctrlp in favor of fzf
@@ -47,6 +42,14 @@ Plugin 'Yggdroot/indentLine'
 
 Plugin 'kamykn/spelunker.vim'
 Plugin 'kamykn/popup-menu.nvim'
+
+" Elixir
+Plugin 'elixir-lang/vim-elixir'
+Plugin 'slashmili/alchemist.vim'
+Plugin 'mhinz/vim-mix-format'
+
+" Solidity
+Plugin 'tomlion/vim-solidity'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -82,6 +85,9 @@ set shell=$SHELL
 set title
 set list
 set listchars=tab:→\ ,eol:¬,trail:⋅,extends:❯,precedes:❮
+set ignorecase
+set smartcase
+set nofoldenable    " disable folding
 
 set nospell
 let g:enable_spelunker_vim = 1
