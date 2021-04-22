@@ -2,6 +2,7 @@
 [user]
 	name = Alisina Bahadori
 	email = alisina.bm@gmail.com
+	signingkey = 879438FF089A204E9905976B23497CA1E4565402
 [github]
 	user = alisinabh
 [init]
@@ -168,3 +169,5 @@
     show = "diff-so-fancy | less --tabs=4 -RFX"
 [pull]
 	rebase = true
+[commit]
+	gpgsign = true

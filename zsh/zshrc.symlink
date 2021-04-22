@@ -61,3 +61,9 @@ zplug load
 
 # added by travis gem
 [ -f /home/alisina/.travis/travis.sh ] && source /home/alisina/.travis/travis.sh
+
+PATH="/home/alisina/perl5/bin${PATH:+:${PATH}}"; export PATH;
+PERL5LIB="/home/alisina/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
+PERL_LOCAL_LIB_ROOT="/home/alisina/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
+PERL_MB_OPT="--install_base \"/home/alisina/perl5\""; export PERL_MB_OPT;
+PERL_MM_OPT="INSTALL_BASE=/home/alisina/perl5"; export PERL_MM_OPT;
