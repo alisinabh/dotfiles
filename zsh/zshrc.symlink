@@ -42,6 +42,7 @@ for config ($ZSH/**/*.zsh) source $config
 export LANG=en_US.UTF-8
 export EDITOR='nvim'
 export GIT_EDITOR='nvim'
+export ERL_AFLAGS="-kernel shell_history enabled"
 
 # Load theme file
 #zplug 'dracula/zsh', as:theme
@@ -60,4 +61,6 @@ zplug load
 source <(kubectl completion zsh)
 
 # Rbenv
-#eval "$(rbenv init -)"
+eval "$(rbenv init -)"
+
+. $(brew --prefix asdf)/asdf.sh

@@ -9,10 +9,10 @@ if OS.mac?
 
     # Applications
     cask "kitty"
-    cask "istat-menus"
-    cask "choosy"
-    cask "audio-hijack"
-    cask "paw"
+    # cask "istat-menus"
+    # cask "choosy"
+    # cask "audio-hijack"
+    # cask "paw"
     cask "postman"
     cask "vlc"
 
@@ -27,7 +27,7 @@ if OS.mac?
 
     # macOS App Store
     mas "Xcode", id: 497799835
-    mas "Amphetamine", id: 937984704
+    # mas "Amphetamine", id: 937984704
 elsif OS.linux?
     brew "xclip"
 end
@@ -82,3 +82,4 @@ brew "git-crypt"
 brew "node"
 brew "npm"
 brew "yarn"
+brew "rbenv"
