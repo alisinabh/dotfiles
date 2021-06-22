@@ -53,14 +53,28 @@ alias pcat='pygmentize -f terminal256 -O style=native -g'
 
 # the fcuk alias :D
 alias fuck='echo "OKAAAAAY! OKAAAAY!! I will do it!" && sleep 0.3 && sudo $(fc -ln -1)'
+
 alias axel='axel -n 16 -a'
 alias px=proxychains
 alias v='nvim'
 alias vim='nvim'
 
+# Kubernetes
+alias kgp='kubectl get pod'
+alias kgs='kubectl get service'
+alias kg='kubectl get'
+alias k='kubectl'
+
+
 if [[ "$TERM" == "xterm-kitty" ]]; then
   alias ssh="kitty +kitten ssh"
 fi
+
+alias pg10docker='docker run -d --rm --name pgdocker -p5432:5432 -e POSTGRES_PASSWORD=password -v ~/.tmp_data/pg10:/var/lib/postgresql/data postgres:10.6'
+alias pg11docker='docker run -d --rm --name pgdocker -p5432:5432 -e POSTGRES_PASSWORD=password -v ~/.tmp_data/pg11:/var/lib/postgresql/data postgres:11'
+alias pg12docker='docker run -d --rm --name pgdocker -p5432:5432 -e POSTGRES_PASSWORD=password -v ~/.tmp_data/pg12:/var/lib/postgresql/data postgres:12'
+alias pg13docker='docker run -d --rm --name pgdocker -p5432:5432 -e POSTGRES_PASSWORD=password -v ~/.tmp_data/pg13:/var/lib/postgresql/data postgres:13'
+alias pgkilldocker='docker kill pgdocker'
 
 # The saviour command
 alias del='mv -t /tmp $@'

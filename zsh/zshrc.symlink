@@ -61,6 +61,6 @@ zplug load
 source <(kubectl completion zsh)
 
 # Rbenv
-eval "$(rbenv init -)"
+# eval "$(rbenv init -)"
 
 . $(brew --prefix asdf)/asdf.sh
