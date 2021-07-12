@@ -13,7 +13,6 @@ git submodule update --init --recursive
 
 source install/link.sh
 
-
 # only perform ArchLinux-specific install
 if [ -f "/etc/arch-release" ]; then
     echo -e "\\n\\nRunning on ArchLinux"

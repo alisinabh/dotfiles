@@ -1,10 +1,6 @@
 set nocompatible              " be iMproved, required
 " filetype off                  " required
 
-let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enabled = 1
-
-
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.config/nvim/bundle/Vundle.vim
 call vundle#begin()
@@ -18,6 +14,7 @@ Plugin 'VundleVim/Vundle.vim'
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
 Plugin 'tpope/vim-fugitive'
+Plugin 'airblade/vim-gitgutter'
 " plugin from http://vim-scripts.org/vim/scripts.html
 Plugin 'L9'
 
@@ -56,6 +53,9 @@ call vundle#end()            " required
 
 let g:mix_format_on_save = 1
 
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+
 filetype plugin indent on    " required
 set t_Co=256
 set laststatus=2
@@ -63,6 +63,7 @@ syntax enable
 set termguicolors
 colorscheme atom-dark-256
 
+set updatetime=100
 set encoding=UTF-8
 set encoding=utf-8
 

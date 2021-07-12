@@ -1,25 +1,24 @@
 
-########50 characters############################
-# type: SUBJECT (50 chars MAX)
-########72 characters##################################################
+########50 characters#############################
+# SUBJECT (50 chars MAX)
+########72 characters###################################################
 # BODY
 # * WHY?
 # * HOW?
 # * SIDE EFFECTS or NEW ISSUES?
-########72 characters##################################################
+########72 characters###################################################
 # FOOTER
 # Resolves: #123
 # See also: #456, #789
-#######################################################################
-
-## Types
-# - feat: A new feature
-# - fix: A bug fix
-# - docs: Changes to documentation
-# - style: Formatting, missing semi colons, etc; no code change
-# - refactor: Refactoring production code
-# - test: Adding tests, refactoring test; no production code change
-# - chore: Updating build tasks, package manager configs, etc; no production code change
+########################################################################
 #
 # Co-authored-by: Anton Bangratz <anton@platogo.com>
 # Co-authored-by: Cristian Riano <cristian@platogo.com>
+# Co-authored-by: Dino Begic <dino@platogo.com>
+# Co-authored-by: Dominik Go <dominik@platogo.com>
+# Co-authored-by: Ender Veiga Bueno <ender@platogo.com>
+# Co-authored-by: Grzegorz Jakubiak <grzegorz@platogo.com>
+# Co-authored-by: Jakob Sommerhuber <jakob@platogo.com>
+# Co-authored-by: Peter Krenn <peter@platogo.com>
+# Co-authored-by: Yanko Ivanov <yanko@platogo.com>
+# Co-authored-by: Nils Mueller <nm@impactful.it>
