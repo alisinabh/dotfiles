@@ -171,3 +171,4 @@
 	rebase = true
 [commit]
 	gpgSign = true
+	template = /Users/alisina/.gitmessage
