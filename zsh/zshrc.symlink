@@ -10,6 +10,9 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
 
   # Fix gpg issue on signed commits
   export GPG_TTY=$(tty)
+  gpgconf --launch gpg-agent
+  gpg-connect-agent updatestartuptty /bye > /dev/null
+  export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
 else
   source /usr/share/zsh/scripts/zplug/init.zsh
 fi
@@ -25,6 +28,7 @@ zplug 'zsh-users/zsh-autosuggestions'
 export PATH="$HOME/.bin:$HOME/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH"
 export PATH="/home/alisina/.local/share/gem/ruby/2.7.0/bin:$PATH"
 export PATH="$HOME/.radicle/bin:$PATH"
+export PATH=".git/safe/../../bin:$PATH"
 
 export ANDROID_HOME="/opt/android-sdk"
 
