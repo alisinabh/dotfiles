@@ -40,6 +40,8 @@ Plugin 'Yggdroot/indentLine'
 Plugin 'kamykn/spelunker.vim'
 Plugin 'kamykn/popup-menu.nvim'
 
+Plugin 'cespare/vim-toml'
+
 " Elixir
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'slashmili/alchemist.vim'
