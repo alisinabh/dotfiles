@@ -13,6 +13,8 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
   gpgconf --launch gpg-agent
   gpg-connect-agent updatestartuptty /bye > /dev/null
   export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+
+  . $(brew --prefix asdf)/asdf.sh
 else
   source /usr/share/zsh/scripts/zplug/init.zsh
 fi
@@ -67,4 +69,3 @@ source <(kubectl completion zsh)
 # Rbenv
 # eval "$(rbenv init -)"
 
-. $(brew --prefix asdf)/asdf.sh
