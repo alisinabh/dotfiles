@@ -10,9 +10,9 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
 
   # Fix gpg issue on signed commits
   export GPG_TTY=$(tty)
+  export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
   gpgconf --launch gpg-agent
   gpg-connect-agent updatestartuptty /bye > /dev/null
-  export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
 
   . $(brew --prefix asdf)/asdf.sh
 else
@@ -63,6 +63,8 @@ fi
 
 # Then, source plugins and add commands to $PATH
 zplug load
+
+setopt histignorespace
 
 source <(kubectl completion zsh)
 

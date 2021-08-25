@@ -14,6 +14,8 @@ Plugin 'VundleVim/Vundle.vim'
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
 Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-commentary'
+Plugin 'tpope/vim-sensible'
 Plugin 'airblade/vim-gitgutter'
 " plugin from http://vim-scripts.org/vim/scripts.html
 Plugin 'L9'
@@ -49,6 +51,9 @@ Plugin 'mhinz/vim-mix-format'
 
 " Solidity
 Plugin 'tomlion/vim-solidity'
+
+" Search and replace with preview
+Plugin 'osyo-manga/vim-over'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
