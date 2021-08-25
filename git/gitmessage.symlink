@@ -1,17 +1,17 @@
-
 ########50 characters#############################
-# SUBJECT (50 chars MAX)
+
 ########72 characters###################################################
 # BODY
 # * WHY?
 # * HOW?
 # * SIDE EFFECTS or NEW ISSUES?
+
 ########72 characters###################################################
 # FOOTER
 # Resolves: #123
 # See also: #456, #789
 ########################################################################
-#
+
 # Co-authored-by: Anton Bangratz <anton@platogo.com>
 # Co-authored-by: Cristian Riano <cristian@platogo.com>
 # Co-authored-by: Dino Begic <dino@platogo.com>

@@ -77,7 +77,7 @@ bind -r K resize-pane -U 5
 bind -r L resize-pane -R 5
 
 # enable mouse support for switching panes/windows
-setw -g mouse off
+setw -g mouse on
 
 # set vi mode for copy mode
 setw -g mode-keys vi
