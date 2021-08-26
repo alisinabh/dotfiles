@@ -1,7 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
-let g:netrw_dirhist_1='/home/alisina/.dotfiles'
-let g:netrw_dirhist_2='/home/alisina/.dotfiles/git'
-let g:netrw_dirhist_3='/home/alisina/.dotfiles/config/nvim'
-let g:netrw_dirhist_4='/home/alisina/.dotfiles/config/nvim/bundle'
-let g:netrw_dirhist_5='/home/alisina/.dotfiles/install'
