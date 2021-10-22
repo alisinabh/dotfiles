@@ -73,6 +73,7 @@ colorscheme atom-dark-256
 set updatetime=100
 set encoding=UTF-8
 set encoding=utf-8
+set inccommand=nosplit
 
 let g:ackprg = 'ag --vimgrep --smart-case'                                                   
 let g:indentLine_char = '⦙'
@@ -87,6 +88,8 @@ set mouse=nv
 set shiftwidth=2
 set softtabstop=2
 set autoread
+set autoindent
+set textwidth=100
 set clipboard=unnamed
 set ttyfast
 set shell=$SHELL

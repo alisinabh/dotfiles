@@ -14,7 +14,6 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
   gpgconf --launch gpg-agent
   gpg-connect-agent updatestartuptty /bye > /dev/null
 
-  . $(brew --prefix asdf)/asdf.sh
 else
   source /usr/share/zsh/scripts/zplug/init.zsh
 fi
@@ -67,6 +66,10 @@ zplug load
 setopt histignorespace
 
 source <(kubectl completion zsh)
+
+. $(brew --prefix asdf)/asdf.sh
+
+export DISABLE_SPRING=1
 
 # Rbenv
 # eval "$(rbenv init -)"
