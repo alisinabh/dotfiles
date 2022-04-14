@@ -71,6 +71,7 @@ source <(kubectl completion zsh)
 
 export DISABLE_SPRING=1
 
-# Rbenv
-# eval "$(rbenv init -)"
+bindkey -v
+bindkey '^R' history-incremental-search-backward
 
+. /opt/asdf-vm/asdf.sh

@@ -20,6 +20,9 @@ if [ -f "/etc/arch-release" ]; then
     source install/pacman.sh
     #source install/yaourt.sh
     source install/yay.sh
+
+    # Add user to video group for light
+    sudo gpasswd -a $USER video
 elif [[ "$OSTYPE" = "darwin"* ]]; then
     echo -e "\\n\\nRunning on MacOS"
 

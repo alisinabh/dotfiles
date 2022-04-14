@@ -1,6 +1,12 @@
 set nocompatible              " be iMproved, required
 " filetype off                  " required
 
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+
+let mapleader = " " " map leader to Space
+map <leader>h :noh<CR>
+
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.config/nvim/bundle/Vundle.vim
 call vundle#begin()
@@ -39,7 +45,7 @@ Plugin 'mileszs/ack.vim'
 
 Plugin 'Yggdroot/indentLine'
 
-Plugin 'kamykn/spelunker.vim'
+"Plugin 'kamykn/spelunker.vim'
 Plugin 'kamykn/popup-menu.nvim'
 
 Plugin 'cespare/vim-toml'
@@ -103,6 +109,11 @@ set nofoldenable    " disable folding
 set nospell
 let g:enable_spelunker_vim = 1
 let g:spelunker_check_type = 2
+
+" Remove trailing spaces on save
+autocmd BufWritePre *.js :%s/\s\+$//e
+autocmd BufWritePre *.vue :%s/\s\+$//e
+autocmd BufWritePre *.sol :%s/\s\+$//e
 
 match ErrorMsg '^\(<\|=\|>\)\{7\}\([^=].\+\)\?$'
 

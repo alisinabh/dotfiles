@@ -83,3 +83,4 @@ alias rm='echo "you should use del command to remove your files safely. if you r
 
 alias be='bundle exec'
 alias rspec='bundle exec rspec'
+alias hardhat='npx hardhat'

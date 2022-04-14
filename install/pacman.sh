@@ -55,6 +55,7 @@ formulas=(
     kitty
     the_silver_searcher
     ttf-fira-code
+    light
 )
 
 for formula in "${formulas[@]}"; do
