@@ -80,3 +80,6 @@ alias pgkilldocker='docker kill pgdocker'
 alias del='mv -t /tmp $@'
 # give up the bad habbit
 alias rm='echo "you should use del command to remove your files safely. if you really want rm back use /bin/rm"'
+
+alias be='bundle exec'
+alias rspec='bundle exec rspec'

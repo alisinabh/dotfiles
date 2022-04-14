@@ -68,3 +68,15 @@ migrator
 vault
 vault
 banzaicloud
+numericality
+hstore
+jsonb
+enumify
+dehash
+platogo
+abzorba
+abzorba
+attrs
+cuircuit
+keyspace
+cassandrax

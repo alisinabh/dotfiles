@@ -102,6 +102,7 @@ set nofoldenable    " disable folding
 
 set nospell
 let g:enable_spelunker_vim = 1
+let g:spelunker_check_type = 2
 
 match ErrorMsg '^\(<\|=\|>\)\{7\}\([^=].\+\)\?$'
 

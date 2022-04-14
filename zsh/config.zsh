@@ -7,8 +7,8 @@ setopt LOCAL_TRAPS
 setopt PROMPT_SUBST
 
 HISTFILE=~/.zsh_history
-HISTSIZE=10000
-SAVEHIST=10000
+HISTSIZE=50000
+SAVEHIST=50000
 
 # history
 setopt HIST_VERIFY
@@ -19,7 +19,7 @@ setopt HIST_IGNORE_ALL_DUPS
 setopt INC_APPEND_HISTORY
 setopt APPEND_HISTORY
 
-setopt COMPLETE_ALIASES
+#setopt COMPLETE_ALIASES
 
 # make terminal command navigation sane again
 bindkey '^[[1;5D' backward-word
