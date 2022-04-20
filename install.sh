@@ -31,12 +31,6 @@ fi
 
 source install/git.sh
 
-if [ -d ~/.nvim/bundle/Vundle.vim ]; then
-    echo "Vundle already cloned!"
-else
-    git clone https://github.com/VundleVim/Vundle.vim.git ~/.nvim/bundle/Vundle.vim
-fi
-
 if ! command_exists zsh; then
     echo "zsh not found. Please install and then re-run installation scripts"
     exit 1
@@ -52,9 +46,7 @@ fi
 
 source install/font.sh
 
-echo "Installing Vundle vim plugins"
-
-nvim +PluginInstall +qall
+source install/spacevim.sh
 
 echo "Done. Reload your terminal."
 

@@ -56,6 +56,10 @@ formulas=(
     the_silver_searcher
     ttf-fira-code
     light
+    glu
+    mesa
+    wxgtk2
+    libpng
 )
 
 for formula in "${formulas[@]}"; do
