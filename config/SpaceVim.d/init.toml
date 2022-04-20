@@ -26,7 +26,11 @@
     project_rooter_outermost = false
     relativenumber = false
     enable_cursorline = false
-    filemanager = "nerdtree"
+
+# Change core config
+[[layers]]
+name = 'core'
+enable_filetree_gitstatus = true
 
 # Enable autocomplete layer
 [[layers]]
