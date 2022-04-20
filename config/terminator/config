@@ -17,7 +17,7 @@
     background_darkness = 0.85
     cursor_shape = underline
     cursor_color = "#aaaaaa"
-    font = Fira Code weight=450 12
+    font = Fira Code weight=450 11
     foreground_color = "#ffffff"
     show_titlebar = False
     scrollback_lines = 5000
