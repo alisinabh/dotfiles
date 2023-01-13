@@ -52,6 +52,8 @@ export GIT_EDITOR='nvim'
 export ERL_AFLAGS="-kernel shell_history enabled"
 export DISABLE_SPRING=1
 
+export GNUPGHOME=~/.gnupg/trezor
+
 # Load theme file
 #zplug 'dracula/zsh', as:theme
 
