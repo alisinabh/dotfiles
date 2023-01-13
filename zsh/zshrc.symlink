@@ -5,15 +5,17 @@ COMPLETION_WAITING_DOTS="true"
 #plugins=(git git-flow elixir adb archlinux systemd terminator vim-interaction zsh-autosuggestions)
 
 if [[ "$OSTYPE" == "darwin"* ]]; then
-  export ZPLUG_HOME=/usr/local/opt/zplug
+  export ZPLUG_HOME=$(brew --prefix)/opt/zplug
   source $ZPLUG_HOME/init.zsh
 
   # Fix gpg issue on signed commits
-  export GPG_TTY=$(tty)
-  export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
-  gpgconf --launch gpg-agent
-  gpg-connect-agent updatestartuptty /bye > /dev/null
-
+  #export GPG_TTY=$(tty)
+  #export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+  #gpgconf --launch gpg-agent
+  #gpg-connect-agent updatestartuptty /bye > /dev/null
+  export FPATH=$(brew --prefix)/share/zsh-completions:$(brew --prefix)/share/zsh/site-functions:$FPATH
+  # in case of compinit complains run this line
+  # compaudit | xargs chmod g-w
 else
   source /usr/share/zsh/scripts/zplug/init.zsh
 fi

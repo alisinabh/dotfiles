@@ -9,12 +9,14 @@ if OS.mac?
 
     # Applications
     cask "kitty"
+    cask "iterm2"
     # cask "istat-menus"
     # cask "choosy"
     # cask "audio-hijack"
     # cask "paw"
     cask "postman"
     cask "vlc"
+    cask "insomnia"
 
     # Browsers
     #cask "firefox"
@@ -24,6 +26,8 @@ if OS.mac?
     cask "font-jetbrains-mono"
     cask "font-cascadia-mono"
     cask "font-3270-nerd-font"
+    cask "font-hack-nerd-font"
+    cask "font-fira-code-nerd-font"
 
     # macOS App Store
     mas "Xcode", id: 497799835
@@ -83,3 +87,5 @@ brew "node"
 brew "npm"
 brew "yarn"
 brew "asdf"
+brew "git-remote-gcrypt"
+brew "pinentry-mac"

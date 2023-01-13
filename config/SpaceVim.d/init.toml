@@ -26,6 +26,9 @@
     project_rooter_outermost = false
     relativenumber = false
     enable_cursorline = false
+    autocomplete_method = "neocomplcache"
+    bootstrap_before = 'customfn#before'
+    bootstrap_after = 'customfn#after'
 
 # Change core config
 [[layers]]
@@ -36,7 +39,7 @@ enable_filetree_gitstatus = true
 [[layers]]
 name = 'autocomplete'
 auto_completion_return_key_behavior = "complete"
-auto_completion_tab_key_behavior = "smart"
+auto_completion_tab_key_behavior = "cycle"
 
 [[layers]]
 name = 'shell'
@@ -44,7 +47,7 @@ default_position = 'bottom'
 default_height = 30
 
 [[layers]]
-name = "leaderf"
+name = "fzf"
 
 [[layers]]
 name = "checkers"
