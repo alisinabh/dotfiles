@@ -81,6 +81,9 @@ format_on_save = true
 enabled_linters = ['rubylint', 'rubocop']
 
 [[layers]]
+name = 'lang#solidity'
+
+[[layers]]
 name = "lang#javascript"
 
 [[layers]]
