@@ -46,7 +46,7 @@ fi
 
 source install/font.sh
 
-source install/spacevim.sh
+source install/astrovim.sh
 
 echo "Done. Reload your terminal."
 
