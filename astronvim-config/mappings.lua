@@ -21,9 +21,34 @@ return {
     -- tables with the `name` key will be registered with which-key if it's installed
     -- this is useful for naming menus
     ["<leader>b"] = { name = "Buffers" },
-    ["<leader>fp"] = { ":ElixirFromPipe<cr>" },
-    ["<leader>tp"] = { ":ElixirToPipe<cr>" },
-    ["<leader>em"] = { ":ElixirExpandMacro<cr>" },
+    ["<leader><Tab>"] = { ":b#<cr>", desc = "Toggle alternate buffer" },
+    -- Git
+    ["<leader>gs"] = { ":G<cr>", desc = "Fugitive" },
+    ["<leader>gl"] = { ":G log --oneline -15<cr>", desc = "Git log" },
+    -- file
+    ["<leader>fy"] = { ":let @+ = fnamemodify(expand(\"%\"), \":~:.\")<cr>", desc = "Copy file path (relative)" },
+    -- tests
+    ["<leader>k"] = { name = "Test" },
+    ["<leader>ka"] = {
+      ":split | execute 'terminal mix test ' | resize 15<cr>",
+      desc = "mix test all"
+    },
+    ["<leader>kf"] = {
+      ":split | execute 'terminal mix test ' . expand('%') | resize 15<cr>",
+      desc = "mix test file"
+    },
+    ["<leader>kn"] = {
+      ":split | execute 'terminal mix test ' . expand('%') . ':' . line('.') | resize 15<cr>",
+      desc = "mix test nearest"
+    },
+    ["<leader>kw"] = {
+      ":split | execute \"terminal fswatch -r -i '\\.ex$\' -i '\\.exs$' -e '.*' . | mix test --listen-on-stdin --stale\" | resize 15<cr>",
+      desc = "mix test watch"
+    },
+    ["<leader>kp"] = {
+      ":split | execute 'terminal iex -S mix test --trace ' . expand('%') . ':' . line('.') | resize 15<cr>",
+      desc = "mix test iex trace"
+    }
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
   },
