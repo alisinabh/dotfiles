@@ -30,7 +30,7 @@ if OS.mac?
     cask "font-fira-code-nerd-font"
 
     # macOS App Store
-    mas "Xcode", id: 497799835
+    #mas "Xcode", id: 497799835
     # mas "Amphetamine", id: 937984704
 elsif OS.linux?
     brew "xclip"
@@ -45,6 +45,7 @@ brew "ack"
 brew "bat"
 brew "cloc"
 brew "diff-so-fancy"
+brew "direnv"
 brew "entr"
 brew "exa"
 brew "fd"
