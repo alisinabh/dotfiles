@@ -20,3 +20,4 @@ unset color_prompt force_color_prompt
 export EDITOR='vim'
 export VISUAL='vim'
 
+. "$HOME/.cargo/env"

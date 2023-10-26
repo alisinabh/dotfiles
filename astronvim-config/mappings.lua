@@ -38,7 +38,7 @@ return {
       desc = "mix test file"
     },
     ["<leader>kn"] = {
-      ":split | execute 'terminal mix test ' . expand('%') . ':' . line('.') | resize 15<cr>",
+      ":let LineNumber=line('.') | split | execute 'terminal mix test ' . expand('%') . ':' . LineNumber | resize 15<cr>",
       desc = "mix test nearest"
     },
     ["<leader>kw"] = {
@@ -46,7 +46,7 @@ return {
       desc = "mix test watch"
     },
     ["<leader>kp"] = {
-      ":split | execute 'terminal iex -S mix test --trace ' . expand('%') . ':' . line('.') | resize 15<cr>",
+      ":let LineNumber=line('.') | split | execute 'terminal iex -S mix test --trace ' . expand('%') . ':' . LineNumber | resize 15<cr>",
       desc = "mix test iex trace"
     }
     -- quick save

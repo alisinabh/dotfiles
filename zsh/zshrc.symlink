@@ -28,6 +28,8 @@ zplug 'zsh-users/zsh-syntax-highlighting', defer:2
 zplug 'zsh-users/zsh-autosuggestions'
 
 # User configuration
+# export PATH="$HOME/Library/Python/3.8/bin:$PATH"
+# export PATH="$HOME/Library/Python/3.9/bin:$PATH"
 export PATH="$HOME/.bin:$HOME/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH"
 export PATH="/home/alisina/.local/share/gem/ruby/2.7.0/bin:$PATH"
 export PATH="$HOME/.radicle/bin:$PATH"
@@ -77,8 +79,11 @@ bindkey '^R' history-incremental-search-backward
 
 if which brew &>/dev/null
 then
-    . $(brew --prefix asdf)/asdf.sh
+    export ASDF_DIR=/opt/homebrew/Cellar/asdf/0.12.0/libexec/
+    . $(brew --prefix asdf)/libexec/asdf.sh
 else
     . /opt/asdf-vm/asdf.sh
 fi
+
+export GNUPGHOME=~/.gnupg/trezor
 
