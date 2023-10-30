@@ -48,7 +48,8 @@ cmp.setup({
     ['<C-k>'] = cmp.mapping.select_prev_item(cmp_select),
     ['<C-j>'] = cmp.mapping.select_next_item(cmp_select),
     ['<C-y>'] = cmp.mapping.confirm({ select = true }),
-    -- ['<CR>'] = cmp.mapping.confirm({ select = true }),
+    ['<C-q>'] = cmp.mapping.abort(),
+    ['<C-n>'] = function(fallback) fallback() end,
     ['<Tab>'] = cmp.mapping.confirm({ select = true })
   }),
 })
