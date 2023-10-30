@@ -22,7 +22,7 @@ if [ -f "/etc/arch-release" ]; then
     source install/yay.sh
 
     # Add user to video group for light
-    sudo gpasswd -a $USER video
+    sudo gpasswd -a "$USER" video
 elif [[ "$OSTYPE" = "darwin"* ]]; then
     echo -e "\\n\\nRunning on MacOS"
 
@@ -46,7 +46,7 @@ fi
 
 source install/font.sh
 
-source install/astronvim.sh
+source install/nvim.sh
 
 echo "Done. Reload your terminal."
 
