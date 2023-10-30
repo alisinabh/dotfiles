@@ -24,7 +24,9 @@ wk.register({
     f = { function() vim.cmd.Git 'fetch' end, "Git Fetch" },
     p = { function() vim.cmd.Git 'push' end, "Git Push" },
     P = { function() vim.cmd.Git 'push --force-with-lease' end, "Git Push (Force)" },
-    b = { telescope_builtin.git_branches, "Git Branches" }
+    b = { telescope_builtin.git_branches, "Git Branches" },
+    d = { function() vim.cmd.Gitsigns 'diffthis' end, "Git diff file" },
+    C = { function() vim.cmd.Gitsigns 'toggle_current_line_blame' end, "Line blame toggle" },
   },
   l = {
     name = "LSP",

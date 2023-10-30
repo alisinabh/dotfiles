@@ -17,7 +17,8 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
   -- Telescope
   {
-    'nvim-telescope/telescope.nvim', tag = '0.1.4',
+    'nvim-telescope/telescope.nvim',
+    tag = '0.1.4',
     dependencies = { 'nvim-lua/plenary.nvim' }
   },
   -- Whichkey
@@ -31,7 +32,7 @@ require("lazy").setup({
     opts = {}
   },
   -- Treesitter
-  { 
+  {
     'nvim-treesitter/nvim-treesitter',
     build = ":TSUpdate"
   },
@@ -50,6 +51,8 @@ require("lazy").setup({
   -- Tpope
   'tpope/vim-fugitive',
   'tpope/vim-surround',
+  -- Gitsigns
+  { 'lewis6991/gitsigns.nvim' },
   -- Comment
   {
     'numToStr/Comment.nvim',
@@ -58,13 +61,19 @@ require("lazy").setup({
   -- Smart Splits
   'mrjones2014/smart-splits.nvim',
   -- Startup
-  { "mhinz/vim-startify", lazy = false },
+  {
+    "mhinz/vim-startify",
+    lazy = false
+  },
   -- Indent Guide
   { "lukas-reineke/indent-blankline.nvim", main = "ibl" },
   -- Elixir
   'elixir-editors/vim-elixir',
   -- LSP
-  { 'VonHeikemen/lsp-zero.nvim', branch = 'v3.x' },
+  {
+    'VonHeikemen/lsp-zero.nvim',
+    branch = 'v3.x'
+  },
   { 'neovim/nvim-lspconfig' },
   { 'hrsh7th/cmp-nvim-lsp' },
   { 'hrsh7th/nvim-cmp' },
@@ -73,7 +82,9 @@ require("lazy").setup({
   { 'williamboman/mason-lspconfig.nvim' },
   { 'elentok/format-on-save.nvim' },
   -- Colorschemes
-  { 'rose-pine/neovim', name = 'rose-pine' },
-  { 'rebelot/kanagawa.nvim', name = 'kanagawa' },
-  { "catppuccin/nvim", name = "catppuccin", priority = 1000 }
+  {
+    "catppuccin/nvim",
+    name = "catppuccin",
+    priority = 1000
+  }
 })

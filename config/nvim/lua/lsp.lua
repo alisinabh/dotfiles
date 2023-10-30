@@ -7,7 +7,7 @@ lsp_zero.on_attach(function(client, bufnr)
     ['K'] = { function() vim.lsp.buf.hover() end, "Show documentation" },
     ['<leader>l'] = {
       name = "LSP",
-      d = { function() vim.lsp.buf.definition() end, "GoTo Definition" },
+      d = { require('telescope.builtin').lsp_definitions, "GoTo Definition" },
       k = { function() vim.lsp.buf.hover() end, "Show Documentation" },
       r = { function() vim.lsp.buf.references() end, "Show References" }
     }
