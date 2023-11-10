@@ -4,8 +4,8 @@ local telescope_builtin = require('telescope.builtin')
 local comment = require('Comment.api')
 
 wk.register({
-  s = {
-    name = "Search",
+  f = {
+    name = "Find",
     f = { telescope_builtin.git_files, "Files (git)" },
     F = { telescope_builtin.find_files, "Files" },
     w = { telescope_builtin.live_grep, "Live Grep" },

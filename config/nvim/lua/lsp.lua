@@ -8,6 +8,7 @@ lsp_zero.on_attach(function(client, bufnr)
     ['<leader>l'] = {
       name = "LSP",
       d = { require('telescope.builtin').lsp_definitions, "GoTo Definition" },
+      D = { function() vim.diagnostic.open_float() end, "Show Diagnostic" },
       k = { function() vim.lsp.buf.hover() end, "Show Documentation" },
       r = { function() vim.lsp.buf.references() end, "Show References" }
     }
@@ -82,6 +83,7 @@ format_on_save.setup({
     typescript = formatters.prettierd,
     typescriptreact = formatters.prettierd,
     yaml = formatters.lsp,
+    solidity = formatters.lsp,
     -- Add your own shell formatters:
     elixir = {
       formatters.remove_trailing_whitespace,
