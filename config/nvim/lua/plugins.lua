@@ -51,6 +51,7 @@ require("lazy").setup({
   -- Tpope
   'tpope/vim-fugitive',
   'tpope/vim-surround',
+  'tpope/vim-sleuth',
   -- Gitsigns
   { 'lewis6991/gitsigns.nvim' },
   -- Comment
