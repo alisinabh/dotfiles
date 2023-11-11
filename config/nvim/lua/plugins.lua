@@ -82,6 +82,13 @@ require("lazy").setup({
   { 'williamboman/mason.nvim' },
   { 'williamboman/mason-lspconfig.nvim' },
   { 'elentok/format-on-save.nvim' },
+  -- Status Line
+  {
+    "nvim-lualine/lualine.nvim",
+    dependencies = {
+      "nvim-tree/nvim-web-devicons"
+    }
+  },
   -- Colorschemes
   {
     "catppuccin/nvim",
