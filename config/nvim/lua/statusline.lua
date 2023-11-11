@@ -14,7 +14,6 @@ require('lualine').setup {
     lualine_y = {
       {
         'diagnostics',
-        symbols = { error = 'E', warn = 'W', info = 'I', hint = 'H' },
         always_visible = false
       },
       'filetype'
