@@ -1,7 +1,7 @@
 -- Sets
 
 vim.opt.nu = true
-vim.opt.relativenumber = false
+vim.opt.relativenumber = true
 
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 2
@@ -29,6 +29,9 @@ vim.opt.isfname:append("@-@")
 vim.opt.updatetime = 50
 
 vim.opt.colorcolumn = "100"
+
+vim.opt.spelllang = 'en_us'
+vim.opt.spell = true
 
 vim.g.mapleader = " "
 

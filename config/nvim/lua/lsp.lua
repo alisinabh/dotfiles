@@ -10,7 +10,8 @@ lsp_zero.on_attach(function(client, bufnr)
       d = { require('telescope.builtin').lsp_definitions, "GoTo Definition" },
       D = { function() vim.diagnostic.open_float() end, "Show Diagnostic" },
       k = { function() vim.lsp.buf.hover() end, "Show Documentation" },
-      r = { function() vim.lsp.buf.references() end, "Show References" }
+      r = { function() vim.lsp.buf.references() end, "Show References" },
+      R = { function() vim.lsp.buf.rename() end, "Rename" }
     }
   }, { buffer = bufnr })
 end)
