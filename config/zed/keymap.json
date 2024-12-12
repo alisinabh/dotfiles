@@ -1,0 +1,40 @@
+[
+  {
+    "context": "Workspace",
+    "bindings": {
+      "ctrl-a j": "terminal_panel::ToggleFocus",
+      "ctrl-a k": "terminal_panel::ToggleFocus",
+      "ctrl-a z": "workspace::ToggleZoom",
+      "cmd-b": "workspace::ToggleBottomDock",
+      "ctrl-a l": "pane::ActivateNextItem",
+      "ctrl-a h": "pane::ActivatePrevItem",
+      "ctrl-a t": "workspace::NewTerminal"
+    }
+  },
+  {
+    "context": "Editor || ProjectPanel",
+    "bindings": {
+      "ctrl-l": "workspace::ActivateNextPane",
+      "ctrl-h": "workspace::ActivatePreviousPane"
+    }
+  },
+  {
+    "context": "ProjectPanel",
+    "bindings": {
+      "space e": "workspace::ToggleRightDock"
+    }
+  },
+  {
+    "context": "vim_mode == normal || vim_mode == visual",
+    "bindings": {
+      "|": "pane::SplitRight",
+      "space f f": "file_finder::Toggle",
+      "space e": "project_panel::ToggleFocus",
+      "space q": "pane::CloseActiveItem",
+      "space c": "buffer_search::Dismiss",
+      "space p o": "projects::OpenRecent",
+      "space f y": "editor::CopyRelativePath",
+      "space /": "editor::ToggleComments"
+    }
+  }
+]
