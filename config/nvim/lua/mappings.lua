@@ -1,5 +1,6 @@
 -- Key bindings remap
 local wk = require("which-key")
+local telescope = require("telescope")
 local telescope_builtin = require('telescope.builtin')
 local comment = require('Comment.api')
 
@@ -9,6 +10,7 @@ wk.register({
     f = { telescope_builtin.git_files, "Files (git)" },
     F = { telescope_builtin.find_files, "Files" },
     w = { telescope_builtin.live_grep, "Live Grep" },
+    W = { telescope.extensions.live_grep_args.live_grep_args, "Live Grep (args)" },
     c = { telescope_builtin.grep_string, "Live Grep Cursor Word" },
     y = { "<cmd>let @+ = fnamemodify(expand(\"%\"), \":~:.\")<cr>", "Copy relative path" },
     h = { telescope_builtin.help_tags, "Help Tags" }

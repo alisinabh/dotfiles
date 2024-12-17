@@ -84,7 +84,13 @@ format_on_save.setup({
     typescript = formatters.prettierd,
     typescriptreact = formatters.prettierd,
     yaml = formatters.lsp,
-    solidity = formatters.lsp,
+    solidity = {
+      formatters.lsp,
+      formatters.if_file_exists({
+        pattern = "foundry.toml",
+        formatter = formatters.shell({ cmd = { "forge", "fmt", "-r", "-" } })
+      })
+    },
     -- Add your own shell formatters:
     elixir = {
       formatters.remove_trailing_whitespace,
