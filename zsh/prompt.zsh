@@ -73,7 +73,15 @@ precmd() {
     print -P '\n$(whoami)@$(hostname) %F{6}%~'
 }
 
+awsvault() {
+    if [[ $AWS_VAULT == "" ]]; then
+        echo ""
+    else
+        echo "%{%F{208}%}✱%faws($AWS_VAULT) "
+    fi
+}
+
 PROMPT_SYMBOL='❯'
 
 export PROMPT='%(?.%F{207}.%F{160})$PROMPT_SYMBOL%f '
-export RPROMPT='`git_dirty`%F{241}$vcs_info_msg_0_%f`git_arrows``suspended_jobs`'
+export RPROMPT='`awsvault``git_dirty`%F{241}$vcs_info_msg_0_%f`git_arrows``suspended_jobs`'
