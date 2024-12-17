@@ -14,9 +14,17 @@
     },
     "version": "2"
   },
+  "multi_cursor_modifier": "cmd_or_ctrl",
+  "lsp": {
+    "typos": {
+      "initialization_options": {
+        "diagnosticSeverity": "Warning"
+      }
+    }
+  },
   "languages": {
     "Elixir": {
-      "language_servers": ["next-ls", "!elixir-ls"],
+      "language_servers": ["next-ls", "!elixir-ls", "typos"],
       "format_on_save": {
         "external": {
           "command": "mix",
@@ -24,6 +32,9 @@
         }
       }
     }
+  },
+  "file_types": {
+    "Markdown": ["livemd"]
   },
   "auto_signature_help": true,
   "show_signature_help_after_edits": true,
@@ -43,7 +54,7 @@
     "dock": "right"
   },
   "active_pane_modifiers": {
-    "inactive_opacity": 0.7
+    "inactive_opacity": 0.8
   },
   "pane_split_direction_vertical": "right",
   "preferred_line_length": 100,
@@ -59,7 +70,11 @@
   },
   "terminal": {
     "copy_on_select": true,
-    "line_height": "standard"
+    "line_height": "standard",
+    "font_family": "FiraCode Nerd Font Mono",
+    "font_features": {
+      "calt": true
+    }
   },
   "inlay_hints": {
     "enabled": true
@@ -67,15 +82,16 @@
   "chat_panel": { "button": false },
   "auto_install_extensions": {
     "catppuccin": true,
+    "csv": true,
+    "dockerfile": true,
     "elixir": true,
     "html": true,
-    "solidity": true,
-    "toml": true,
-    "dockerfile": true,
     "make": true,
+    "snippets": true,
+    "solidity": true,
     "terraform": true,
-    "csv": true,
-    "snippets": true
+    "toml": true,
+    "typos": true
   },
   "file_finder": {
     "modal_max_width": "large"
