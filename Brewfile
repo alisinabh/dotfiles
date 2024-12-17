@@ -1,40 +1,33 @@
-if OS.mac?
-    # taps
-    tap "homebrew/cask"
-    tap "homebrew/cask-fonts"
+# taps
+tap "homebrew/cask"
+tap "homebrew/cask-fonts"
 
-    brew "mas"
-    brew "noti"
-    brew "trash"
+brew "mas"
+brew "noti"
+brew "trash"
 
-    # Applications
-    cask "kitty"
-    cask "iterm2"
-    # cask "istat-menus"
-    # cask "choosy"
-    # cask "audio-hijack"
-    # cask "paw"
-    cask "postman"
-    cask "vlc"
-    cask "insomnia"
+# Applications
+cask "iterm2"
+cask "alacritty"
+cask "postman"
+cask "bruno"
+cask "insomnia"
+cask "vlc"
 
-    # Browsers
-    #cask "firefox"
+# Browsers
+cask "firefox"
 
-    # Fonts
-    cask "font-fira-code"
-    cask "font-jetbrains-mono"
-    cask "font-cascadia-mono"
-    cask "font-3270-nerd-font"
-    cask "font-hack-nerd-font"
-    cask "font-fira-code-nerd-font"
+# Fonts
+cask "font-fira-code"
+cask "font-jetbrains-mono"
+cask "font-cascadia-mono"
+cask "font-3270-nerd-font"
+cask "font-hack-nerd-font"
+cask "font-fira-code-nerd-font"
 
-    # macOS App Store
-    #mas "Xcode", id: 497799835
-    # mas "Amphetamine", id: 937984704
-elsif OS.linux?
-    brew "xclip"
-end
+# macOS App Store
+mas "Xcode", id: 497799835
+mas "Amphetamine", id: 937984704
 
 tap "homebrew/bundle"
 tap "homebrew/core"
@@ -42,6 +35,8 @@ tap "schniz/tap"
 
 # packages
 brew "ack"
+brew "zed"
+brew "rust"
 brew "bat"
 brew "cloc"
 brew "diff-so-fancy"
