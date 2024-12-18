@@ -6,6 +6,8 @@ PROMPT_EOL_MARK=""
 #plugins=(git git-flow elixir adb archlinux systemd terminator vim-interaction zsh-autosuggestions)
 
 if [[ "$OSTYPE" == "darwin"* ]]; then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+
   export ZPLUG_HOME=$(brew --prefix)/opt/zplug
   source $ZPLUG_HOME/init.zsh
 
@@ -30,7 +32,7 @@ zplug 'zsh-users/zsh-autosuggestions'
 
 # User configuration
 # export PATH="$HOME/Library/Python/3.8/bin:$PATH"
-# export PATH="$HOME/Library/Python/3.9/bin:$PATH"
+export PATH="$HOME/Library/Python/3.9/bin:$PATH"
 export PATH="$HOME/.bin:$HOME/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH"
 export PATH="/home/alisina/.local/share/gem/ruby/2.7.0/bin:$PATH"
 export PATH="$HOME/.radicle/bin:$PATH"

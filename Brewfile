@@ -1,7 +1,3 @@
-# taps
-tap "homebrew/cask"
-tap "homebrew/cask-fonts"
-
 brew "mas"
 brew "noti"
 brew "trash"
@@ -25,24 +21,26 @@ cask "font-3270-nerd-font"
 cask "font-hack-nerd-font"
 cask "font-fira-code-nerd-font"
 
+# Editor
+cask "zed"
+
+cask "slack"
+
 # macOS App Store
-mas "Xcode", id: 497799835
-mas "Amphetamine", id: 937984704
+# mas "Xcode", id: 497799835
+# mas "Amphetamine", id: 937984704
 
 tap "homebrew/bundle"
-tap "homebrew/core"
 tap "schniz/tap"
 
 # packages
 brew "ack"
-brew "zed"
 brew "rust"
 brew "bat"
 brew "cloc"
 brew "diff-so-fancy"
 brew "direnv"
 brew "entr"
-brew "exa"
 brew "fd"
 brew "fzf"
 brew "gh"

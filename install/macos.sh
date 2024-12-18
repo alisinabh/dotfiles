@@ -108,10 +108,10 @@ setup_macos() {
         defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 
         echo "Set a blazingly fast keyboard repeat rate"
-        defaults write NSGlobalDomain KeyRepeat -int 1
+	defaults write -g KeyRepeat -int 1 # normal minimum is 2 (30 ms)
 
         echo "Set a shorter Delay until key repeat"
-        defaults write NSGlobalDomain InitialKeyRepeat -int 15
+	defaults write -g InitialKeyRepeat -int 15 # normal minimum is 15 (225 ms)
 
         echo "Enable tap to click (Trackpad)"
         defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
