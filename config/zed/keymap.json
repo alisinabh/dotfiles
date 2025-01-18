@@ -1,6 +1,5 @@
 [
   {
-    "context": "Workspace",
     "bindings": {
       "ctrl-a j": "terminal_panel::ToggleFocus",
       "ctrl-a k": "terminal_panel::ToggleFocus",
@@ -8,7 +7,9 @@
       "cmd-b": "workspace::ToggleBottomDock",
       "ctrl-a l": "pane::ActivateNextItem",
       "ctrl-a h": "pane::ActivatePrevItem",
-      "ctrl-a t": "workspace::NewTerminal"
+      "ctrl-a t": "workspace::NewTerminal",
+      "ctrl-[": "pane::GoBack",
+      "ctrl-]": "pane::GoForward"
     }
   },
   {
@@ -34,7 +35,10 @@
       "space c": "buffer_search::Dismiss",
       "space p o": "projects::OpenRecent",
       "space f y": "editor::CopyRelativePath",
-      "space /": "editor::ToggleComments"
+      "space /": "editor::ToggleComments",
+      "space g b": "editor::ToggleGitBlame",
+      "space tab": "pane::GoBack",
+      "space shift-tab": "pane::GoForward"
     }
   }
 ]

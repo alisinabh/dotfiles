@@ -7,6 +7,9 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "tab_bar": {
+    "show": true
+  },
   "assistant": {
     "default_model": {
       "provider": "zed.dev",
@@ -34,22 +37,37 @@
     }
   },
   "file_types": {
-    "Markdown": ["livemd"]
+    "Markdown": ["livemd"],
+    "HTML": ["handlebars"]
   },
+  "format_on_save": "on",
   "auto_signature_help": true,
   "show_signature_help_after_edits": true,
   "show_user_picture": false,
   "show_whitespaces": "selection",
   "base_keymap": "VSCode",
+  "tabs": {
+    "file_icons": true,
+    "git_status": true,
+    "always_show_close_button": true,
+    "show_diagnostics": "all"
+  },
+  "buffer_line_height": "comfortable",
   "features": {
-    "inline_completion_provider": "none"
+    "inline_completion_provider": "copilot"
   },
   "telemetry": {
     "metrics": false
   },
   "vim_mode": true,
+  "vim": {
+    "use_system_clipboard": "never",
+    "use_smartcase_find": true,
+    "use_smartcase_substitute": true
+  },
   "theme": "Catppuccin Mocha",
-  "buffer_font_size": 15,
+  "buffer_font_size": 14,
+  "buffer_font_family": "FiraCode Nerd Font Mono",
   "project_panel": {
     "dock": "right"
   },
@@ -77,7 +95,8 @@
     }
   },
   "inlay_hints": {
-    "enabled": true
+    "enabled": true,
+    "show_background": false
   },
   "chat_panel": { "button": false },
   "auto_install_extensions": {

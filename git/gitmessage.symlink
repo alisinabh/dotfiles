@@ -1,24 +1,15 @@
-########50 characters#############################
+####### 50 characters ############################
 
-########72 characters###################################################
+####### 72 characters ##################################################
 # BODY
 # * WHY?
 # * HOW?
 # * SIDE EFFECTS or NEW ISSUES?
 
-########72 characters###################################################
+####### 72 characters ##################################################
 # FOOTER
 # Resolves: #123
 # See also: #456, #789
 ########################################################################
 
-# Co-authored-by: Anton Bangratz <anton@platogo.com>
-# Co-authored-by: Cristian Riano <cristian@platogo.com>
-# Co-authored-by: Dino Begic <dino@platogo.com>
-# Co-authored-by: Dominik Go <dominik@platogo.com>
-# Co-authored-by: Ender Veiga Bueno <ender@platogo.com>
-# Co-authored-by: Grzegorz Jakubiak <grzegorz@platogo.com>
-# Co-authored-by: Jakob Sommerhuber <jakob@platogo.com>
-# Co-authored-by: Peter Krenn <peter@platogo.com>
-# Co-authored-by: Yanko Ivanov <yanko@platogo.com>
-# Co-authored-by: Nils Mueller <nm@impactful.it>
+# Co-authored-by: Full Name <example@acme.com>

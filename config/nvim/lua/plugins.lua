@@ -34,10 +34,14 @@ require("lazy").setup({
   -- Whichkey
   {
     "folke/which-key.nvim",
+    dependencies = {
+      { 'echasnovski/mini.nvim', version = '*' }
+    },
     event = "VeryLazy",
     init = function()
       vim.o.timeout = true
       vim.o.timeoutlen = 300
+      require('mini.icons').setup()
     end,
     opts = {}
   },
@@ -104,5 +108,24 @@ require("lazy").setup({
     "catppuccin/nvim",
     name = "catppuccin",
     priority = 1000
-  }
+  },
+  -- Spell Checkr
+  "tekumara/typos-lsp",
+  -- Inlay Hints at end of line,
+  {
+    "chrisgrieser/nvim-lsp-endhints",
+    event = "LspAttach",
+    opts = {}, -- required, even if empty
+  },
+  -- AI Companion
+  {
+    "olimorris/codecompanion.nvim",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "nvim-treesitter/nvim-treesitter",
+    },
+    config = true
+  },
+  -- Diff
+  { 'echasnovski/mini.nvim', version = '*' }
 })
