@@ -1,6 +1,7 @@
 require("set")
 require("plugins")
 require("mappings")
+require("custom_types")
 require("treesitter")
 require("neotree")
 require("indentguide")

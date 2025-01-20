@@ -25,6 +25,7 @@ require('mason').setup({})
 require('mason-lspconfig').setup({
   ensure_installed = {
     'elixirls',
+    'ts_ls',
     'rust_analyzer',
     'lua_ls',
     'yamlls',
@@ -48,6 +49,15 @@ require('lspconfig').typos_lsp.setup({
     -- Defaults to error.
     diagnosticSeverity = "Warning"
   }
+})
+
+require('lspconfig').bashls.setup({
+  on_attach = function(client, bufnr)
+    -- Disable diagnostics for .env files
+    if vim.fn.expand("%:t"):match("^%.env") then
+      client.handlers["textDocument/publishDiagnostics"] = function() end
+    end
+  end,
 })
 
 local cmp = require('cmp')
