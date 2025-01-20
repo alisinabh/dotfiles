@@ -85,6 +85,19 @@ cmp.setup({
 local format_on_save = require("format-on-save")
 local formatters = require("format-on-save.formatters")
 
+local function find_mix_root()
+  local path = vim.fn.expand("%:p") -- Get the current buffer's full path
+  -- Search upwards for `mix.lock`
+  local root = vim.fs.find("mix.lock", { upward = true, path = vim.fn.fnamemodify(path, ":h") })
+
+  if root and #root > 0 then
+    local root_dir = vim.fs.dirname(root[1])
+    return root_dir
+  else
+    return vim.fn.getcwd()
+  end
+end
+
 format_on_save.setup({
   exclude_path_patterns = {
     "/node_modules/",
@@ -119,7 +132,18 @@ format_on_save.setup({
     elixir = {
       formatters.remove_trailing_whitespace,
       formatters.remove_trailing_newlines,
-      formatters.shell({ cmd = { "mix", "format", "--stdin-filename", "%", "-" } })
+      formatters.shell({
+        cmd = function()
+          local root = find_mix_root()
+          local full_path = vim.fn.expand("%:p")
+          local relative_path = root and full_path:sub(#root + 2) or full_path
+
+          local command = "cd " ..
+              vim.fn.shellescape(root) ..
+              " && cat | mix format --stdin-filename " .. vim.fn.shellescape(relative_path) .. " -"
+          return { "sh", "-c", "'" .. command .. "'" }
+        end
+      })
     }
   },
   -- Optional: fallback formatter to use when no formatters match the current filetype
