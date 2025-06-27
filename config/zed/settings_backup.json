@@ -9,7 +9,6 @@
 {
   "context_servers": {
     "tidewave-ai": {
-      "source": "custom",
       "command": {
         "path": "mcp-proxy",
         "args": ["http://localhost:4000/tidewave/mcp"],

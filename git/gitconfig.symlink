@@ -1,9 +1,10 @@
 # gitconfig
 [user]
-	name = Alisina Bahadori
-	email = alisina.bm@gmail.com
-        #signingKey = 879438FF089A204E9905976B23497CA1E4565402
-        signingKey = 53CA444498D1BB2B6AE962CD426F119872188125
+  name = Alisina Bahadori
+  email = alisina@northernlabs.ca
+  ; signingKey = 879438FF089A204E9905976B23497CA1E4565402
+  ; signingKey = 53CA444498D1BB2B6AE962CD426F119872188125
+  signingKey = C46C35493812D44488746CBC4112F0FDC17931C8
 [github]
 	user = alisinabh
 [init]
@@ -81,7 +82,7 @@
   #assumed = "!git ls-files -v | grep ^h | cut -c 3-"
   #unassumeall = "!git assumed | xargs git update-index --no-assume-unchanged"
 
-  # clean up all 
+  # clean up all
   #forget = "!git fetch -p && git branch -vv | awk '/: gone]/{print $1}' | xargs git branch -D"
 
   # show the most recently touched branches
@@ -187,3 +188,5 @@
 	process = git-lfs filter-process
 	required = true
 	clean = git-lfs clean -- %f
+[gcrypt]
+	require-explicit-force-push = true
