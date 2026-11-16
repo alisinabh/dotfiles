@@ -1,2 +1,5 @@
 /config/nvim/bundle
 Brewfile.lock*
+# Herdr writes these editor helpers into every mod it loads
+/herdr/mods/*/gpui-kit.d.ts
+/herdr/mods/*/jsconfig.json
